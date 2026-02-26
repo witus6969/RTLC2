@@ -1,0 +1,10 @@
+{
+  "name": "domain_trusts",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Enumerate Active Directory domain trust relationships.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

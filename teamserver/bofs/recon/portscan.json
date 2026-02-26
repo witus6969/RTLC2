@@ -1,0 +1,13 @@
+{
+  "name": "Port Scanner",
+  "category": "recon",
+  "author": "RTLC2",
+  "description": "TCP port scanner using direct socket connections. Supports custom port ranges.",
+  "args": [
+    {"name": "target", "type": "string", "description": "Target IP or CIDR range"},
+    {"name": "ports", "type": "string", "description": "Port range (e.g., 1-1024, 80,443,8080)"},
+    {"name": "timeout", "type": "int", "description": "Connection timeout in ms (default: 1000)"}
+  ],
+  "platforms": ["windows", "linux"],
+  "opsec": "Uses raw sockets. Consider scanning slowly to avoid detection."
+}

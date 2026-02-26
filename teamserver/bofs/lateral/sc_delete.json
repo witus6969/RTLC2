@@ -1,0 +1,13 @@
+{
+  "name": "sc_delete",
+  "category": "lateral",
+  "author": "TrustedSec",
+  "description": "Delete a service on a remote system to clean up after lateral movement.",
+  "source": "https://github.com/trustedsec/CS-Remote-OPs-BOF",
+  "args": [
+    {"name": "target", "type": "string", "required": true, "description": "Target hostname or IP"},
+    {"name": "service_name", "type": "string", "required": true, "description": "Name of the service to delete"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "noisy"
+}

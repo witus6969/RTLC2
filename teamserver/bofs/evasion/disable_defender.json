@@ -1,0 +1,10 @@
+{
+  "name": "disable_defender",
+  "category": "evasion",
+  "author": "N7WEra",
+  "description": "Disable Windows Defender real-time protection and Tamper Protection.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "noisy"
+}

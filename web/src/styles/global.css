@@ -1,0 +1,70 @@
+@import './variables.css';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+::-webkit-scrollbar-corner {
+  background: var(--bg-primary);
+}
+
+/* Selection */
+::selection {
+  background: var(--red-dark);
+  color: #ffffff;
+}
+
+/* Focus */
+:focus-visible {
+  outline: 1px solid var(--red-primary);
+  outline-offset: -1px;
+}
+
+a {
+  color: var(--red-primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--red-light);
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+}

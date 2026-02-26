@@ -1,0 +1,10 @@
+{
+  "name": "listdns",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Enumerate DNS server zones and records for domain reconnaissance.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

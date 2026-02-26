@@ -1,0 +1,12 @@
+{
+  "name": "block_dlls",
+  "category": "evasion",
+  "author": "N7WEra",
+  "description": "Block non-Microsoft DLLs from loading in a child process using PROCESS_CREATION_MITIGATION_POLICY.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "command", "type": "string", "required": true, "description": "Command to run with DLL blocking"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

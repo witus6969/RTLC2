@@ -1,0 +1,13 @@
+{
+  "name": "certify_bof",
+  "category": "dotnet",
+  "author": "N7WEra",
+  "description": "AD Certificate Services enumeration and abuse for certificate-based attack paths.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "command", "type": "string", "required": false, "description": "find, request, cas"},
+    {"name": "domain", "type": "string", "required": false, "description": "Target domain"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

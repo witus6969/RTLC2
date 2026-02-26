@@ -1,0 +1,11 @@
+{
+  "name": "Unhook NTDLL",
+  "category": "evasion",
+  "author": "RTLC2",
+  "description": "Remove EDR hooks from ntdll.dll by remapping a clean copy from disk or KnownDlls.",
+  "args": [
+    {"name": "method", "type": "string", "description": "Method: disk, knowndlls, syscall (default: disk)"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "Restores original ntdll.dll bytes. Some EDRs detect ntdll remapping."
+}

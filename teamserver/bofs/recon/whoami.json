@@ -1,0 +1,9 @@
+{
+  "name": "Whoami",
+  "category": "recon",
+  "author": "RTLC2",
+  "description": "Enumerate current user context, privileges, and group memberships using token APIs.",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "Uses token enumeration APIs instead of whoami.exe."
+}

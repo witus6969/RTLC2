@@ -1,0 +1,22 @@
+{
+  "name": "APT41 DoubleDragon",
+  "user_agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko",
+  "request_headers": {
+    "Accept": "text/html, application/xhtml+xml, */*",
+    "Accept-Language": "en-US",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Connection": "Keep-Alive",
+    "Cache-Control": "no-cache"
+  },
+  "response_headers": {
+    "Content-Type": "text/html; charset=utf-8",
+    "Server": "Microsoft-IIS/8.5",
+    "X-Powered-By": "ASP.NET",
+    "X-AspNet-Version": "4.0.30319",
+    "Cache-Control": "private",
+    "X-Frame-Options": "DENY"
+  },
+  "uris": ["/portal/login", "/api/v1/status", "/connect/authorize"],
+  "body_transform": "base64"
+}

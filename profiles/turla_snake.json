@@ -1,0 +1,23 @@
+{
+  "name": "Turla Snake",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0",
+  "request_headers": {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate, br",
+    "DNT": "1",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate"
+  },
+  "response_headers": {
+    "Content-Type": "application/xml; charset=utf-8",
+    "Server": "Apache/2.4.57",
+    "Last-Modified": "Thu, 01 Jan 2024 00:00:00 GMT",
+    "ETag": "\"a1b2c3d4\"",
+    "Cache-Control": "public, max-age=3600",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "uris": ["/weather/forecast", "/news/rss", "/feeds/update.xml"],
+  "body_transform": "prepend"
+}

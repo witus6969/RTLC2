@@ -1,0 +1,10 @@
+{
+  "name": "arp",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "ARP table enumeration to discover hosts on the local network segment.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

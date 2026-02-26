@@ -1,0 +1,12 @@
+{
+  "name": "callback_injection",
+  "category": "evasion",
+  "author": "N7WEra",
+  "description": "Callback-based shellcode execution using Windows API callbacks (e.g., EnumWindows, CreateTimerQueueTimer).",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "callback_method", "type": "string", "required": false, "description": "EnumWindows, CreateTimerQueueTimer, etc."}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

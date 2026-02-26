@@ -1,0 +1,13 @@
+{
+  "name": "TypeLib Hijacking",
+  "category": "persistence",
+  "author": "CyberSecurityUP",
+  "description": "Hijack COM TypeLib registration for DLL persistence. Modifies TypeLib registry keys to load a specified DLL when a COM class is instantiated, without touching common persistence registry keys monitored by EDR.",
+  "source": "https://github.com/CyberSecurityUP/TypeLib-Hijacking",
+  "args": [
+    {"name": "clsid", "type": "string", "description": "Target CLSID to hijack"},
+    {"name": "dll_path", "type": "string", "description": "Full path to the DLL to load"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "Avoids commonly monitored Run/RunOnce keys. Uses TypeLib registry entries which are less scrutinized by EDR."
+}

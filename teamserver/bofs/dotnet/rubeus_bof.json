@@ -1,0 +1,13 @@
+{
+  "name": "rubeus_bof",
+  "category": "dotnet",
+  "author": "N7WEra",
+  "description": "Rubeus Kerberos abuse toolkit for ticket operations, roasting, and delegation attacks.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "command", "type": "string", "required": true, "description": "Rubeus command: kerberoast, asreproast, tgtdeleg, etc."},
+    {"name": "arguments", "type": "string", "required": false, "description": "Additional arguments for the Rubeus command"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

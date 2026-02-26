@@ -1,0 +1,14 @@
+{
+  "name": "wmi_persist",
+  "category": "persistence",
+  "author": "N7WEra",
+  "description": "Install WMI event subscription persistence for stealthy execution on trigger events.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "name", "type": "string", "required": true, "description": "WMI subscription name"},
+    {"name": "command", "type": "string", "required": true, "description": "Command to execute on trigger"},
+    {"name": "interval", "type": "int", "required": false, "description": "Trigger interval in seconds"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "noisy"
+}

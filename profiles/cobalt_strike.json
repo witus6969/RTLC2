@@ -1,0 +1,20 @@
+{
+  "name": "Cobalt Strike Default",
+  "user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; BOIE9;ENUS)",
+  "request_headers": {
+    "Accept": "*/*",
+    "Accept-Language": "en-US",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "Keep-Alive",
+    "Cache-Control": "no-cache"
+  },
+  "response_headers": {
+    "Content-Type": "application/octet-stream",
+    "Server": "Apache",
+    "Connection": "close",
+    "X-Powered-By": "PHP/5.6.40",
+    "Cache-Control": "no-cache"
+  },
+  "uris": ["/pixel", "/submit.php", "/ca"],
+  "body_transform": "base64"
+}

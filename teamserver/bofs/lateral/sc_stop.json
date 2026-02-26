@@ -1,0 +1,13 @@
+{
+  "name": "sc_stop",
+  "category": "lateral",
+  "author": "TrustedSec",
+  "description": "Stop a service on a remote system.",
+  "source": "https://github.com/trustedsec/CS-Remote-OPs-BOF",
+  "args": [
+    {"name": "target", "type": "string", "required": true, "description": "Target hostname or IP"},
+    {"name": "service_name", "type": "string", "required": true, "description": "Name of the service to stop"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

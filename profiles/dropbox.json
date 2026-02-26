@@ -1,0 +1,21 @@
+{
+  "name": "Dropbox",
+  "user_agent": "DropboxDesktopClient/185.4.6054 (Windows; 10.0.19045; x86_64; en_US)",
+  "request_headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Type": "application/json",
+    "Authorization": "Bearer sl.BxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxEY",
+    "Dropbox-API-Arg": "{}"
+  },
+  "response_headers": {
+    "Content-Type": "application/json",
+    "Server": "nginx",
+    "X-Dropbox-Request-Id": "a1b2c3d4e5f67890abcdef1234567890",
+    "X-Server-Response-Time": "42",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache"
+  },
+  "uris": ["/2/files/list_folder", "/2/files/download", "/2/files/upload_session/start"],
+  "body_transform": "base64"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "cacls",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Enumerate file and folder ACLs (Access Control Lists) for a specified path.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [
+    {"name": "path", "type": "string", "required": true, "description": "File or folder path to enumerate ACLs"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

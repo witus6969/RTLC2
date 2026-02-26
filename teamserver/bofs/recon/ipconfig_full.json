@@ -1,0 +1,10 @@
+{
+  "name": "ipconfig_full",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Extended network configuration dump including DNS servers, DHCP info, and adapter details.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

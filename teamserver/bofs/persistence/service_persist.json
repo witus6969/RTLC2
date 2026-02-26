@@ -1,0 +1,14 @@
+{
+  "name": "service_persist",
+  "category": "persistence",
+  "author": "TrustedSec",
+  "description": "Create a Windows service for persistent execution across system reboots.",
+  "source": "https://github.com/trustedsec/CS-Remote-OPs-BOF",
+  "args": [
+    {"name": "service_name", "type": "string", "required": true, "description": "Name of the service to create"},
+    {"name": "binary_path", "type": "string", "required": true, "description": "Path to the service binary"},
+    {"name": "display_name", "type": "string", "required": false, "description": "Display name for the service"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "noisy"
+}

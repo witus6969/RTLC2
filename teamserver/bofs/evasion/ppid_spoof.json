@@ -1,0 +1,13 @@
+{
+  "name": "ppid_spoof",
+  "category": "evasion",
+  "author": "N7WEra",
+  "description": "Parent PID spoofing helper to create processes under a specified parent for defense evasion.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "parent_pid", "type": "int", "required": true, "description": "PID of the desired parent process"},
+    {"name": "command", "type": "string", "required": true, "description": "Command to execute under the spoofed parent"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

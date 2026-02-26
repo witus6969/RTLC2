@@ -1,0 +1,36 @@
+{
+  "name": "ImgPayload",
+  "version": "1.0.0",
+  "author": "CyberSecurityUP",
+  "description": "LSB Steganography plugin for embedding shellcode into images. Uses Least Significant Bit encoding to hide binary data within PNG/BMP images without visible changes to the image.",
+  "source": "https://github.com/CyberSecurityUP/ImgPayload",
+  "category": "evasion",
+  "status": "active",
+  "capabilities": [
+    "embed_shellcode",
+    "extract_shellcode",
+    "image_analysis"
+  ],
+  "supported_formats": ["PNG", "BMP"],
+  "max_payload_size": "1MB",
+  "actions": [
+    {
+      "name": "Embed Shellcode",
+      "endpoint": "/api/v1/plugins/imgpayload/embed",
+      "method": "POST",
+      "params": [
+        {"name": "image", "type": "base64", "description": "Source image in base64"},
+        {"name": "shellcode", "type": "base64", "description": "Shellcode to embed in base64"},
+        {"name": "format", "type": "string", "description": "Output format: png or bmp"}
+      ]
+    },
+    {
+      "name": "Extract Shellcode",
+      "endpoint": "/api/v1/plugins/imgpayload/extract",
+      "method": "POST",
+      "params": [
+        {"name": "image", "type": "base64", "description": "Steganized image in base64"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Amazon AWS",
+  "user_agent": "aws-sdk-java/2.20.0 Linux/5.15.0 OpenJDK_64-Bit_Server_VM/17.0.6+10 java/17.0.6 vendor/Eclipse_Adoptium cfg/retry-mode/standard",
+  "request_headers": {
+    "Accept": "application/json",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Type": "application/x-amz-json-1.1",
+    "X-Amz-Target": "AWSServiceDiscovery.ListServices",
+    "X-Amz-Date": "20240101T000000Z",
+    "Authorization": "AWS4-HMAC-SHA256 Credential=AKIAIOSFODNN7EXAMPLE/20240101/us-east-1/ec2/aws4_request"
+  },
+  "response_headers": {
+    "Content-Type": "application/x-amz-json-1.1",
+    "Server": "Server",
+    "x-amzn-RequestId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "X-Amz-Cf-Pop": "IAD89-C1",
+    "X-Cache": "Miss from cloudfront",
+    "Strict-Transport-Security": "max-age=47304000; includeSubDomains"
+  },
+  "uris": ["/api/v1/services", "/latest/meta-data", "/api/v2/instances"],
+  "body_transform": "base64"
+}

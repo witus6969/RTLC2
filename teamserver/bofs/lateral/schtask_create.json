@@ -1,0 +1,15 @@
+{
+  "name": "schtask_create",
+  "category": "lateral",
+  "author": "TrustedSec",
+  "description": "Create a scheduled task on a remote system for lateral movement.",
+  "source": "https://github.com/trustedsec/CS-Remote-OPs-BOF",
+  "args": [
+    {"name": "target", "type": "string", "required": true, "description": "Target hostname or IP"},
+    {"name": "task_name", "type": "string", "required": true, "description": "Name of the scheduled task"},
+    {"name": "command", "type": "string", "required": true, "description": "Command to execute"},
+    {"name": "trigger", "type": "string", "required": false, "description": "Task trigger (e.g., ONLOGON, DAILY)"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

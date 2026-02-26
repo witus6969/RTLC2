@@ -1,0 +1,10 @@
+{
+  "name": "uptime",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Query system uptime to determine when the machine was last rebooted.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "winrm_bof",
+  "category": "lateral",
+  "author": "N7WEra",
+  "description": "Execute commands on a remote system via Windows Remote Management (WinRM).",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "target", "type": "string", "required": true, "description": "Target hostname or IP"},
+    {"name": "command", "type": "string", "required": true, "description": "Command to execute on the remote system"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

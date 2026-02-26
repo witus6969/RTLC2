@@ -1,0 +1,55 @@
+# ============================================
+# RTLC2 Team Server Configuration
+# Red Team Leaders - C2 Framework
+# ============================================
+
+server:
+  host: "0.0.0.0"
+  port: 54321        # HTTP REST API + Web UI port
+  tls: false
+  cert_file: ""
+  key_file: ""
+  rate_limit: 100
+
+database:
+  driver: "sqlite"
+  path: "data/rtlc2.db"
+
+crypto:
+  # Leave empty to auto-generate on first run
+  # Once generated, copy it here to persist across restarts
+  aes_key: ""
+  xor_key: ""
+
+logging:
+  level: "info"
+  # Log file path (logs always show on terminal too)
+  # Set to "" to only log to terminal
+  file: "data/rtlc2.log"
+
+# ============================================
+# Operators - define team members here
+# ============================================
+# Each operator needs: username, password, role
+# Roles: admin, operator, viewer
+#
+# - admin    = full access (create listeners, manage agents, manage operators)
+# - operator = can interact with agents and listeners
+# - viewer   = read-only access
+#
+# If password is empty, a random one is generated and shown on startup
+# Operators are created on first run; existing ones are skipped
+#
+operators:
+  - username: "admin"
+    password: "changeme123"
+    role: "admin"
+
+  # Add more operators below:
+  # - username: "operator1"
+  #   password: "SecureP@ss"
+  #   role: "operator"
+  #
+  # - username: "viewer1"
+  #   password: ""
+  #   role: "viewer"

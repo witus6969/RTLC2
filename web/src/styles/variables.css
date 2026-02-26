@@ -1,0 +1,47 @@
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #0d0d0d;
+  --bg-tertiary: #111111;
+  --bg-elevated: #151515;
+  --bg-input: #1a1a1a;
+  --bg-hover: #1a0000;
+  --bg-selected: #2a0000;
+  --bg-selected-strong: #3d0000;
+
+  --border-primary: #1a1a1a;
+  --border-secondary: #2a2a2a;
+  --border-accent: #8b0000;
+  --border-focus: #cc0000;
+
+  --text-primary: #e0e0e0;
+  --text-secondary: #c0c0c0;
+  --text-muted: #808080;
+  --text-dim: #666666;
+  --text-disabled: #555555;
+  --text-dark: #444444;
+
+  --red-primary: #cc0000;
+  --red-light: #ff3333;
+  --red-dark: #8b0000;
+  --red-hover: #dd1111;
+  --red-bg: #1a0000;
+  --red-bg-strong: #220000;
+  --green: #00cc00;
+  --green-dim: #008800;
+  --yellow: #cccc00;
+  --orange: #ff6600;
+  --cyan: #00cccc;
+  --blue: #4488cc;
+
+  --font-sans: 'Inter', 'Segoe UI', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
+
+  --sidebar-width: 52px;
+  --statusbar-height: 28px;
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}

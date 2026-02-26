@@ -1,0 +1,13 @@
+{
+  "name": "sharphound_bof",
+  "category": "dotnet",
+  "author": "N7WEra",
+  "description": "BloodHound data collection via BOF for Active Directory attack path mapping.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "collection_method", "type": "string", "required": false, "description": "All, DCOnly, Session, etc."},
+    {"name": "output_dir", "type": "string", "required": false, "description": "Output directory for collected data"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "noisy"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Windows Update",
+  "user_agent": "Windows-Update-Agent/10.0.19041.3636 Client-Protocol/2.33",
+  "request_headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Type": "application/octet-stream",
+    "Connection": "Keep-Alive",
+    "If-Modified-Since": "Thu, 01 Jan 2024 00:00:00 GMT"
+  },
+  "response_headers": {
+    "Content-Type": "application/octet-stream",
+    "Server": "Microsoft-IIS/10.0",
+    "MS-CV": "a1b2c3d4e5f6.0",
+    "X-CCC": "US",
+    "X-CID": "1",
+    "Cache-Control": "public, max-age=86400"
+  },
+  "uris": ["/v9/windowsupdate/redir/muv4wuredir.cab", "/v11/2/windowsupdate/selfupdate", "/v6/windowsupdate/update"],
+  "body_transform": "base64"
+}

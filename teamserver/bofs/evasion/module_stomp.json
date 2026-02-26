@@ -1,0 +1,12 @@
+{
+  "name": "module_stomp",
+  "category": "evasion",
+  "author": "N7WEra",
+  "description": "Module stomping technique to load shellcode into a legitimate DLL's memory region.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "target_dll", "type": "string", "required": true, "description": "DLL to stomp, e.g. xpsservices.dll"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

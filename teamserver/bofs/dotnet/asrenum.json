@@ -1,0 +1,12 @@
+{
+  "name": "asrenum",
+  "category": "dotnet",
+  "author": "mlcsec",
+  "description": "Enumerate AS-REP roastable user accounts that do not require Kerberos pre-authentication.",
+  "source": "https://github.com/mlcsec/ASRenum-BOF",
+  "args": [
+    {"name": "domain", "type": "string", "required": false, "description": "Target domain (current domain if omitted)"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

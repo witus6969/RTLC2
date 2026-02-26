@@ -1,0 +1,13 @@
+{
+  "name": "Scheduled Task",
+  "category": "persistence",
+  "author": "RTLC2",
+  "description": "Create a scheduled task for persistence using COM-based task scheduler API.",
+  "args": [
+    {"name": "task_name", "type": "string", "description": "Name for the scheduled task"},
+    {"name": "command", "type": "string", "description": "Command to execute"},
+    {"name": "trigger", "type": "string", "description": "Trigger type: logon, daily, startup"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "Creates task via COM API instead of schtasks.exe to avoid command-line logging."
+}

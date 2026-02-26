@@ -1,0 +1,14 @@
+{
+  "name": "schtask_persist",
+  "category": "persistence",
+  "author": "TrustedSec",
+  "description": "Create a scheduled task for persistent execution on a configurable schedule.",
+  "source": "https://github.com/trustedsec/CS-Remote-OPs-BOF",
+  "args": [
+    {"name": "task_name", "type": "string", "required": true, "description": "Name of the scheduled task"},
+    {"name": "command", "type": "string", "required": true, "description": "Command to execute"},
+    {"name": "schedule", "type": "string", "required": false, "description": "ONLOGON, DAILY, etc."}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

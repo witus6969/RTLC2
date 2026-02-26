@@ -1,0 +1,13 @@
+{
+  "name": "sharpview_bof",
+  "category": "dotnet",
+  "author": "N7WEra",
+  "description": "SharpView domain reconnaissance for enumerating users, computers, groups, and GPOs.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "command", "type": "string", "required": true, "description": "Get-DomainUser, Get-DomainComputer, etc."},
+    {"name": "arguments", "type": "string", "required": false, "description": "Additional arguments for the SharpView command"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

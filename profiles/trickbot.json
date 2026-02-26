@@ -1,0 +1,20 @@
+{
+  "name": "TrickBot",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
+  "request_headers": {
+    "Accept": "text/html, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Type": "multipart/form-data; boundary=----TrickBoundary",
+    "Connection": "Keep-Alive"
+  },
+  "response_headers": {
+    "Content-Type": "image/png",
+    "Server": "nginx",
+    "Content-Length": "4096",
+    "Cache-Control": "no-cache",
+    "Connection": "close"
+  },
+  "uris": ["/group1/", "/images/redcar.png", "/response.php"],
+  "body_transform": "append"
+}

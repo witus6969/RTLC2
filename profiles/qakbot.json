@@ -1,0 +1,19 @@
+{
+  "name": "QakBot",
+  "user_agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko",
+  "request_headers": {
+    "Accept": "*/*",
+    "Accept-Language": "en-US",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Connection": "Keep-Alive"
+  },
+  "response_headers": {
+    "Content-Type": "application/octet-stream",
+    "Server": "nginx/1.14.2",
+    "Connection": "keep-alive",
+    "Cache-Control": "no-store, no-cache"
+  },
+  "uris": ["/t4", "/t5", "/t6"],
+  "body_transform": "base64"
+}

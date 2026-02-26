@@ -1,0 +1,13 @@
+{
+  "name": "ldap_query",
+  "category": "recon",
+  "author": "N7WEra",
+  "description": "Execute a generic LDAP query against Active Directory with optional attribute filtering.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "query", "type": "string", "required": true, "description": "LDAP query filter string"},
+    {"name": "attribute", "type": "string", "required": false, "description": "Specific attribute to return"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

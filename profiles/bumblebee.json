@@ -1,0 +1,23 @@
+{
+  "name": "BumbleBee",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
+  "request_headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Type": "application/json",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-origin"
+  },
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Server": "cloudflare",
+    "CF-RAY": "84a1b2c3d4e5f678-IAD",
+    "Cache-Control": "no-store",
+    "X-Content-Type-Options": "nosniff",
+    "Alt-Svc": "h3=\":443\"; ma=86400"
+  },
+  "uris": ["/api/v1/report", "/cdn/payload", "/update/check"],
+  "body_transform": "base64"
+}

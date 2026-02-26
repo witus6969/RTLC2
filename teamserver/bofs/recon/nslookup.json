@@ -1,0 +1,13 @@
+{
+  "name": "nslookup",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Perform DNS resolution for a hostname with optional custom DNS server.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [
+    {"name": "hostname", "type": "string", "required": true, "description": "Hostname to resolve"},
+    {"name": "dns_server", "type": "string", "required": false, "description": "DNS server to query"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

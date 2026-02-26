@@ -1,0 +1,22 @@
+{
+  "name": "GitHub API",
+  "user_agent": "GitHub-Hookshot/760256b",
+  "request_headers": {
+    "Accept": "application/vnd.github+json",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Authorization": "Bearer ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "X-GitHub-Request-Id": "A1B2:C3D4:E5F6:7890:ABCD"
+  },
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Server": "GitHub.com",
+    "X-GitHub-Media-Type": "github.v3; format=json",
+    "X-GitHub-Request-Id": "A1B2:C3D4:E5F6:7890:ABCD",
+    "X-RateLimit-Limit": "5000",
+    "X-RateLimit-Remaining": "4999",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+  },
+  "uris": ["/api/v3/repos", "/api/v3/users", "/api/v3/gists"],
+  "body_transform": "base64"
+}

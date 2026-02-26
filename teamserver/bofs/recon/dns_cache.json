@@ -1,0 +1,10 @@
+{
+  "name": "dns_cache",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Dump the DNS resolver cache to reveal recently resolved hostnames.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

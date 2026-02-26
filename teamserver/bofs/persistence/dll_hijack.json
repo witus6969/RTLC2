@@ -1,0 +1,13 @@
+{
+  "name": "dll_hijack",
+  "category": "persistence",
+  "author": "N7WEra",
+  "description": "DLL search order hijacking persistence by placing a malicious DLL in a trusted application path.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "target_app", "type": "string", "required": true, "description": "Application to hijack"},
+    {"name": "dll_path", "type": "string", "required": true, "description": "Path to the malicious DLL"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

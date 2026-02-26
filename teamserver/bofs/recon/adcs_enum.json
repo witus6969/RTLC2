@@ -1,0 +1,10 @@
+{
+  "name": "adcs_enum",
+  "category": "recon",
+  "author": "TrustedSec",
+  "description": "Enumerate Active Directory Certificate Services templates and configuration for potential abuse.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

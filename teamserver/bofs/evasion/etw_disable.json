@@ -1,0 +1,10 @@
+{
+  "name": "etw_disable",
+  "category": "evasion",
+  "author": "TrustedSec",
+  "description": "Disable ETW (Event Tracing for Windows) providers to blind security monitoring.",
+  "source": "https://github.com/trustedsec/CS-Remote-OPs-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

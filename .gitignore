@@ -1,0 +1,67 @@
+# =============================================
+# RTLC2 - Git Ignore Rules
+# =============================================
+
+# Build artifacts
+build/
+bin/
+agent/build/
+agent/build-*/
+web/dist/
+
+# Dependencies
+web/node_modules/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Database & runtime data
+data/*.db
+data/*.log
+*.sqlite
+*.sqlite3
+
+# Compiled binaries
+*.o
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.out
+teamserver/teamserver
+
+# CMake generated
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile.cmake
+config.h
+
+# Go
+teamserver/teamserver
+*.test
+
+# Secrets & credentials
+*.pem
+*.key
+*.crt
+.env
+.env.*
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Claude Code working directory
+.claude/
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak

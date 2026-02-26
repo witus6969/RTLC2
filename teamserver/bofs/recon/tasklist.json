@@ -1,0 +1,10 @@
+{
+  "name": "tasklist",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Process enumeration with command line arguments and module information.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

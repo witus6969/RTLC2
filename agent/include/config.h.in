@@ -1,0 +1,61 @@
+#ifndef RTLC2_CONFIG_H
+#define RTLC2_CONFIG_H
+
+// RTLC2 Agent Configuration (generated at compile time)
+#define RTLC2_VERSION      "0.7.0"
+#define RTLC2_C2_HOST      "@RTLC2_C2_HOST@"
+#define RTLC2_C2_PORT      @RTLC2_C2_PORT@
+#define RTLC2_SLEEP_SEC    @RTLC2_SLEEP_INTERVAL@
+#define RTLC2_JITTER_PCT   @RTLC2_JITTER@
+#define RTLC2_USE_TLS      @RTLC2_USE_TLS@
+#define RTLC2_AES_KEY_HEX  "@RTLC2_AES_KEY@"
+#define RTLC2_USER_AGENT   "@RTLC2_USER_AGENT@"
+
+// OPSEC Options
+#define RTLC2_SLEEP_MASK     @RTLC2_SLEEP_MASK@
+#define RTLC2_STACK_SPOOF    @RTLC2_STACK_SPOOF@
+#define RTLC2_ETW_PATCH_ON   @RTLC2_ETW_PATCH@
+#define RTLC2_UNHOOK_NTDLL_ON @RTLC2_UNHOOK_NTDLL@
+#define RTLC2_SYSCALL_METHOD_STR "@RTLC2_SYSCALL_METHOD@"
+#define RTLC2_DELAY_EXEC     @RTLC2_EVASION_DELAY_EXEC@
+#define RTLC2_ENV_KEYING     @RTLC2_EVASION_ENV_KEYING@
+
+// Kill Date (Unix timestamp, 0 = disabled)
+#define RTLC2_KILL_DATE      @RTLC2_KILL_DATE@
+
+// Working Hours (24h format, 0 = disabled)
+#define RTLC2_WORK_START_HOUR @RTLC2_WORK_START_HOUR@
+#define RTLC2_WORK_END_HOUR   @RTLC2_WORK_END_HOUR@
+#define RTLC2_WORK_DAYS       @RTLC2_WORK_DAYS@
+
+// Spawn-To (sacrificial process for fork-and-run)
+#define RTLC2_SPAWN_TO       "@RTLC2_SPAWN_TO@"
+
+// AMSI bypass at startup
+#define RTLC2_AMSI_PATCH     @RTLC2_AMSI_PATCH@
+
+// Heap encryption during sleep
+#define RTLC2_HEAP_ENCRYPT   @RTLC2_HEAP_ENCRYPT@
+
+// ETW-TI patch at startup
+#define RTLC2_ETWTI_PATCH    @RTLC2_ETWTI_PATCH@
+
+// Module stomping
+#define RTLC2_MODULE_STOMP   @RTLC2_MODULE_STOMP@
+
+// Environment keying (domain/user/file check)
+#define RTLC2_ENV_KEY_DOMAIN "@RTLC2_ENV_KEY_DOMAIN@"
+#define RTLC2_ENV_KEY_USER   "@RTLC2_ENV_KEY_USER@"
+#define RTLC2_ENV_KEY_FILE   "@RTLC2_ENV_KEY_FILE@"
+
+// Transport selection
+#define RTLC2_TRANSPORT_TYPE "@RTLC2_TRANSPORT_TYPE@"
+#define RTLC2_DOH_RESOLVER  "@RTLC2_DOH_RESOLVER@"
+#define RTLC2_FRONT_DOMAIN  "@RTLC2_FRONT_DOMAIN@"
+#define RTLC2_OBFSTR_SEED   @RTLC2_OBFSTR_SEED@
+
+// Endpoints
+#define RTLC2_REGISTER_URI "/register"
+#define RTLC2_CHECKIN_URI  "/checkin"
+
+#endif // RTLC2_CONFIG_H

@@ -1,0 +1,12 @@
+{
+  "name": "resources",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Enumerate network resources and file shares on a target or local system.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [
+    {"name": "target", "type": "string", "required": false, "description": "Target host to enumerate (local if omitted)"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

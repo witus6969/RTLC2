@@ -1,0 +1,10 @@
+{
+  "name": "driversigs",
+  "category": "recon",
+  "author": "trustedsec",
+  "description": "Enumerate loaded kernel drivers and their signatures to detect EDR/AV products.",
+  "source": "https://github.com/trustedsec/CS-Situational-Awareness-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

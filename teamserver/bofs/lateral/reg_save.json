@@ -1,0 +1,14 @@
+{
+  "name": "reg_save",
+  "category": "lateral",
+  "author": "TrustedSec",
+  "description": "Save a remote registry hive (SAM, SECURITY, or SYSTEM) to a file for offline credential extraction.",
+  "source": "https://github.com/trustedsec/CS-Remote-OPs-BOF",
+  "args": [
+    {"name": "target", "type": "string", "required": true, "description": "Target hostname or IP"},
+    {"name": "hive", "type": "string", "required": true, "description": "SAM, SECURITY, or SYSTEM"},
+    {"name": "output_path", "type": "string", "required": true, "description": "Output file path for the saved hive"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "noisy"
+}

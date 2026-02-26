@@ -1,0 +1,23 @@
+{
+  "name": "Office 365",
+  "user_agent": "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.17126; Pro)",
+  "request_headers": {
+    "Accept": "application/json",
+    "Accept-Language": "en-US",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Type": "application/json; charset=utf-8",
+    "Authorization": "Bearer EwAIA+pvBAAUkohl8kAHFOxyNAPMEFGliYMHBygAAQ",
+    "X-AnchorMailbox": "user@contoso.com",
+    "X-ClientAppId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+  },
+  "response_headers": {
+    "Content-Type": "application/json; odata.metadata=minimal; odata.streaming=true",
+    "Server": "Microsoft-IIS/10.0",
+    "X-Powered-By": "ASP.NET",
+    "X-Ms-Request-Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "uris": ["/owa/service.svc", "/api/v2.0/me/messages", "/mapi/emsmdb"],
+  "body_transform": "base64"
+}

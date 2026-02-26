@@ -1,0 +1,13 @@
+{
+  "name": "startup_folder",
+  "category": "persistence",
+  "author": "N7WEra",
+  "description": "Create a shortcut in the Startup folder for persistence across reboots.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "shortcut_name", "type": "string", "required": true, "description": "Name of the shortcut file"},
+    {"name": "target_path", "type": "string", "required": true, "description": "Path to the target executable"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

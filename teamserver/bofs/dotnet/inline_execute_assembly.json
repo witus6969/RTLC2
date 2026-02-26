@@ -1,0 +1,13 @@
+{
+  "name": "inline_execute_assembly",
+  "category": "dotnet",
+  "author": "anthemtotheego",
+  "description": "In-process .NET assembly execution via BOF without fork-and-run.",
+  "source": "https://github.com/anthemtotheego/InlineExecute-Assembly",
+  "args": [
+    {"name": "assembly_path", "type": "string", "required": true, "description": "Path to the .NET assembly to execute"},
+    {"name": "arguments", "type": "string", "required": false, "description": "Arguments to pass to the assembly"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "moderate"
+}

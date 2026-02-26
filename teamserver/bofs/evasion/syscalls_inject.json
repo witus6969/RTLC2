@@ -1,0 +1,13 @@
+{
+  "name": "syscalls_inject",
+  "category": "evasion",
+  "author": "N7WEra",
+  "description": "Indirect syscall-based process injection to evade user-mode hooks.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "pid", "type": "int", "required": true, "description": "Target process ID to inject into"},
+    {"name": "shellcode_path", "type": "string", "required": true, "description": "Path to shellcode file"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

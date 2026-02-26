@@ -1,0 +1,21 @@
+{
+  "name": "FIN7",
+  "user_agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0",
+  "request_headers": {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Type": "application/json",
+    "Connection": "keep-alive"
+  },
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Server": "nginx/1.18.0",
+    "X-Transaction-ID": "a1b2c3d4e5f6",
+    "X-Content-Type-Options": "nosniff",
+    "Strict-Transport-Security": "max-age=31536000",
+    "Cache-Control": "no-store"
+  },
+  "uris": ["/payment/process", "/api/transaction", "/checkout/confirm"],
+  "body_transform": "base64"
+}

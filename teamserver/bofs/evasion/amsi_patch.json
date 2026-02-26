@@ -1,0 +1,9 @@
+{
+  "name": "AMSI Patch",
+  "category": "evasion",
+  "author": "RTLC2",
+  "description": "Patch AMSI (Antimalware Scan Interface) to bypass script scanning in PowerShell and .NET.",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "Patches AmsiScanBuffer in amsi.dll. Effective for PowerShell payloads."
+}

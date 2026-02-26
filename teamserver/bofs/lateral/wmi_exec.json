@@ -1,0 +1,12 @@
+{
+  "name": "WMI Exec",
+  "category": "lateral",
+  "author": "RTLC2",
+  "description": "Execute commands on remote hosts via WMI Win32_Process Create method.",
+  "args": [
+    {"name": "target", "type": "string", "description": "Target hostname or IP"},
+    {"name": "command", "type": "string", "description": "Command to execute remotely"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "Uses DCOM/WMI which is common in enterprise. Creates remote process under wmiprvse.exe."
+}

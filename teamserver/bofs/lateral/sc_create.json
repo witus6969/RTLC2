@@ -1,0 +1,14 @@
+{
+  "name": "sc_create",
+  "category": "lateral",
+  "author": "TrustedSec",
+  "description": "Create a service on a remote system for lateral movement or persistence.",
+  "source": "https://github.com/trustedsec/CS-Remote-OPs-BOF",
+  "args": [
+    {"name": "target", "type": "string", "required": true, "description": "Target hostname or IP"},
+    {"name": "service_name", "type": "string", "required": true, "description": "Name of the service to create"},
+    {"name": "binary_path", "type": "string", "required": true, "description": "Binary path for the service"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "noisy"
+}

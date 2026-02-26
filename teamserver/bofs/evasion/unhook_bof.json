@@ -1,0 +1,10 @@
+{
+  "name": "unhook_bof",
+  "category": "evasion",
+  "author": "TrustedSec",
+  "description": "Unhook ntdll.dll by replacing the hooked copy with a fresh copy from disk.",
+  "source": "https://github.com/trustedsec/CS-Remote-OPs-BOF",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

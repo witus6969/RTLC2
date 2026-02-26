@@ -1,0 +1,12 @@
+{
+  "name": "seatbelt_bof",
+  "category": "dotnet",
+  "author": "N7WEra",
+  "description": "Seatbelt security audit and host enumeration for situational awareness.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [
+    {"name": "command", "type": "string", "required": false, "description": "Seatbelt command group: all, user, system, etc."}
+  ],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

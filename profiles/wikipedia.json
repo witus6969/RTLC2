@@ -1,0 +1,20 @@
+{
+  "name": "Wikipedia",
+  "user_agent": "WikipediaApp/2.7.50488-r-2023-11-27 (Android 13; Phone) Google/Pixel 6",
+  "request_headers": {
+    "Accept": "application/json; charset=utf-8",
+    "Accept-Language": "en-US",
+    "Accept-Encoding": "gzip, deflate, br",
+    "X-WMF-UUID": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+  },
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Server": "mw2423.codfw.wmnet",
+    "X-Content-Type-Options": "nosniff",
+    "X-Cache": "cp6013 miss, cp6010 hit/1",
+    "X-Cache-Status": "hit-front",
+    "Strict-Transport-Security": "max-age=106384710; includeSubDomains; preload"
+  },
+  "uris": ["/w/api.php", "/wiki/Special:Search", "/w/index.php"],
+  "body_transform": "base64"
+}

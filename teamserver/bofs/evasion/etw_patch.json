@@ -1,0 +1,9 @@
+{
+  "name": "ETW Patch",
+  "category": "evasion",
+  "author": "RTLC2",
+  "description": "Patch Event Tracing for Windows (ETW) to prevent telemetry collection by EDR solutions.",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "Patches EtwEventWrite in ntdll.dll. Some EDRs monitor for ETW tampering."
+}

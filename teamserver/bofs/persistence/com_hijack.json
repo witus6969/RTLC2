@@ -1,0 +1,12 @@
+{
+  "name": "COM Hijack",
+  "category": "persistence",
+  "author": "RTLC2",
+  "description": "Hijack COM object registration to achieve DLL persistence via InprocServer32 registry modification.",
+  "args": [
+    {"name": "clsid", "type": "string", "description": "Target CLSID"},
+    {"name": "dll_path", "type": "string", "description": "Path to payload DLL"}
+  ],
+  "platforms": ["windows"],
+  "opsec": "Uses less-monitored HKCU COM keys instead of HKLM."
+}

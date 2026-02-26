@@ -1,0 +1,21 @@
+{
+  "name": "Lazarus Group",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
+  "request_headers": {
+    "Accept": "text/html, */*",
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Referer": "https://www.google.co.kr/"
+  },
+  "response_headers": {
+    "Content-Type": "text/html; charset=euc-kr",
+    "Server": "nginx",
+    "X-Powered-By": "PHP/7.2.34",
+    "Cache-Control": "no-cache, no-store",
+    "Pragma": "no-cache",
+    "X-Frame-Options": "SAMEORIGIN"
+  },
+  "uris": ["/board/view.php", "/bbs/data/update", "/member/login"],
+  "body_transform": "base64"
+}

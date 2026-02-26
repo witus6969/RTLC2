@@ -1,0 +1,10 @@
+{
+  "name": "watson_bof",
+  "category": "dotnet",
+  "author": "N7WEra",
+  "description": "Watson privilege escalation check to identify missing patches and exploitable vulnerabilities.",
+  "source": "https://github.com/N7WEra/BofAllTheThings",
+  "args": [],
+  "platforms": ["windows"],
+  "opsec": "safe"
+}

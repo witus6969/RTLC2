@@ -1,0 +1,9 @@
+{
+  "name": "Netstat",
+  "category": "recon",
+  "author": "RTLC2",
+  "description": "Enumerate active network connections and listening ports using native APIs.",
+  "args": [],
+  "platforms": ["windows", "linux"],
+  "opsec": "Uses GetTcpTable2/GetUdpTable APIs instead of running netstat.exe."
+}

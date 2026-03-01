@@ -5,11 +5,21 @@
 #ifdef RTLC2_WINDOWS
 
 #include <windows.h>
+#include <winhttp.h>
 #include <comdef.h>
 #include <wbemidl.h>
 #include <cstring>
 #include <string>
 #include <sstream>
+
+namespace {
+// Helper to convert HRESULT to hex string without inline stringstream
+std::string HresultToHex(HRESULT hr) {
+    std::stringstream ss;
+    ss << std::hex << hr;
+    return ss.str();
+}
+} // anonymous namespace
 
 #pragma comment(lib, "wbemuuid.lib")
 #pragma comment(lib, "ole32.lib")
@@ -520,7 +530,7 @@ std::string DCOMExec(const std::string& target, const std::string& command,
                      const std::string& user, const std::string& pass) {
     HRESULT hr = CoInitializeEx(NULL, COINIT_MULTITHREADED);
     if (FAILED(hr) && hr != RPC_E_CHANGED_MODE) {
-        return "CoInitialize failed: 0x" + (std::stringstream() << std::hex << hr).str();
+        return "CoInitialize failed: 0x" + HresultToHex(hr);
     }
 
     hr = CoInitializeSecurity(NULL, -1, NULL, NULL,
@@ -859,7 +869,7 @@ std::string DCOMExec(const std::string& target, const std::string& command,
                                         return "DCOM (ShellWindows) executed on " + target + ": " + command;
                                     } else {
                                         return "DCOM ShellExecute failed: HRESULT 0x" +
-                                               (std::stringstream() << std::hex << hr).str();
+                                               HresultToHex(hr);
                                     }
                                 }
                                 pApp->Release();
@@ -878,7 +888,7 @@ std::string DCOMExec(const std::string& target, const std::string& command,
     }
 
     return "DCOM execution failed on " + target + " (both MMC20 and ShellWindows). "
-           "HRESULT: 0x" + (std::stringstream() << std::hex << hr).str();
+           "HRESULT: 0x" + HresultToHex(hr);
 }
 
 // Master lateral movement dispatcher

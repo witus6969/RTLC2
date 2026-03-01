@@ -15,6 +15,12 @@ enum class SyscallMethod {
     HellsGate   // Resolve SSN via Hell's/Halo's Gate + indirect
 };
 
+struct SyscallEntry {
+    DWORD ssn;
+    PVOID gadget_addr;    // syscall;ret gadget address (for indirect)
+    bool resolved;
+};
+
 bool Initialize(SyscallMethod method);
 bool IsInitialized();
 SyscallMethod GetMethod();

@@ -3,7 +3,7 @@
 #include "execution.h"
 #include "evasion.h"
 
-#ifdef RTLC2_WINDOWS
+#if defined(RTLC2_WINDOWS) && defined(_MSC_VER)
 
 #include <windows.h>
 #include <metahost.h>
@@ -305,4 +305,25 @@ AssemblyResult ExecuteAssembly(const std::vector<uint8_t>& assembly_data,
 } // namespace execution
 } // namespace rtlc2
 
-#endif // RTLC2_WINDOWS
+#endif // RTLC2_WINDOWS && _MSC_VER
+
+#if defined(RTLC2_WINDOWS) && !defined(_MSC_VER)
+// MinGW: CLR hosting requires MSVC SDK (metahost.h, mscoree.h, mscorlib.tlb)
+// Provide stub implementations that report the limitation
+#include <string>
+#include <vector>
+#include <cstdint>
+
+namespace rtlc2 {
+namespace execution {
+
+AssemblyResult ExecuteAssembly(const std::vector<uint8_t>& assembly_data,
+                               const std::string& arguments,
+                               const std::string& runtime_version) {
+    (void)assembly_data; (void)arguments; (void)runtime_version;
+    return { false, "[!] .NET assembly execution not available (MinGW build - requires MSVC)", -1 };
+}
+
+} // namespace execution
+} // namespace rtlc2
+#endif // RTLC2_WINDOWS && !_MSC_VER

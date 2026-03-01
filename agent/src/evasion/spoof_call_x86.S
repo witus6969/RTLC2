@@ -31,7 +31,9 @@
 .intel_syntax noprefix
 
 .global _SpoofedCall32
+#ifdef __ELF__
 .type _SpoofedCall32, @function
+#endif
 
 _SpoofedCall32:
     /*
@@ -125,7 +127,9 @@ _SpoofedCall32:
     pop     ebp
     ret
 
+#ifdef __ELF__
 .size _SpoofedCall32, . - _SpoofedCall32
+#endif
 
 #endif /* !_WIN64 */
 #endif /* RTLC2_WINDOWS */

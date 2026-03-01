@@ -4,6 +4,10 @@
 #include <cstdint>
 #include <string>
 
+#ifdef RTLC2_WINDOWS
+#include <windows.h>
+#endif
+
 namespace rtlc2 {
 namespace evasion {
 

@@ -9,6 +9,8 @@
 #   - ssn in ecx, gadget in rdx
 #   - args shifted: arg1=r8, arg2=r9, arg3-11=stack
 
+# Use Intel syntax for x64 Windows syscall gates
+.intel_syntax noprefix
 .text
 
 .global DoDirectSyscall
@@ -25,10 +27,6 @@ DoDirectSyscall:
     mov rdx, r8             # arg2
     mov r8, r9              # arg3
     mov r9, [rsp+0x28]      # arg4
-
-    # Stack args need to be at [rsp+0x28] for the syscall
-    # But we've consumed our first 4 register args, so stack args start at [rsp+0x30]
-    # We need to set up the shadow space and copy remaining stack args
 
     # The syscall expects args 5+ at [rsp+0x28] onwards
     # Our args 5+ are at [rsp+0x30] onwards (offset by the return address + shadow)

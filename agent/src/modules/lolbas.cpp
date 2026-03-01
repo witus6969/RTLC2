@@ -9,7 +9,7 @@
 #endif
 
 namespace rtlc2 {
-namespace modules {
+namespace execution {
 
 // Helper: execute command and capture output
 static std::string RunCommand(const std::string& cmd) {
@@ -127,5 +127,5 @@ std::string LOLBASExec(const std::string& method, const std::string& args) {
 #endif
 }
 
-} // namespace modules
+} // namespace execution
 } // namespace rtlc2

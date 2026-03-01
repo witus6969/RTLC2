@@ -1175,8 +1175,8 @@ void Agent::RegisterHandlers() {
 #ifdef __APPLE__
             char** envp = *_NSGetEnviron();
 #else
-            extern char** environ;
-            char** envp = environ;
+            // environ is declared in unistd.h at global scope
+            char** envp = ::environ;
 #endif
             for (char** env = envp; *env; env++) {
                 oss << *env << "\n";

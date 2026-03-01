@@ -268,6 +268,7 @@ PEResult ExecutePE(const std::vector<uint8_t>& pe_data,
         typedef int(*EntryPoint_t)();
         EntryPoint_t pEntry = (EntryPoint_t)((BYTE*)mappedBase + mappedNt->OptionalHeader.AddressOfEntryPoint);
 
+#ifdef _MSC_VER
         __try {
             result.exit_code = pEntry();
             result.success = true;
@@ -275,6 +276,12 @@ PEResult ExecutePE(const std::vector<uint8_t>& pe_data,
         } __except (EXCEPTION_EXECUTE_HANDLER) {
             result.output = "PE execution caused exception: 0x" + std::to_string(GetExceptionCode());
         }
+#else
+        // MinGW/GCC: no SEH support, use signal-safe approach
+        result.exit_code = pEntry();
+        result.success = true;
+        result.output = "PE executed, exit code: " + std::to_string(result.exit_code);
+#endif
     }
 
     return result;

@@ -10,12 +10,6 @@
 namespace rtlc2 {
 namespace syscalls {
 
-struct SyscallEntry {
-    DWORD ssn;
-    PVOID gadget_addr;    // syscall;ret gadget address (for indirect)
-    bool resolved;
-};
-
 static struct SyscallTable {
     SyscallEntry NtAllocateVirtualMemory;
     SyscallEntry NtWriteVirtualMemory;

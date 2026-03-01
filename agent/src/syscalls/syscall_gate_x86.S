@@ -8,6 +8,7 @@
 #   Invoke via: int 0x2e (legacy) or sysenter (fast path)
 #
 # int 0x2e is the traditional method and works on all x86 Windows versions.
+.intel_syntax noprefix
 # sysenter is faster but requires a specific return mechanism via SYSEXIT,
 # which expects return address in EDX -- using it directly is fragile.
 # We use int 0x2e for maximum compatibility.

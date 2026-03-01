@@ -69,7 +69,7 @@ std::vector<std::pair<std::string, std::string>> JobManager::ListJobs() {
     std::vector<std::pair<std::string, std::string>> result;
     for (const auto& [id, info] : jobs_) {
         if (info->running.load()) {
-            result.push_back({id, info->description});
+            result.emplace_back(id, info->description);
         }
     }
     return result;

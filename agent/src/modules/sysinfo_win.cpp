@@ -1,6 +1,8 @@
 #ifdef RTLC2_WINDOWS
 
 #include "agent.h"
+#include <winsock2.h>
+#include <ws2tcpip.h>
 #include <windows.h>
 #include <lm.h>
 #include <sddl.h>

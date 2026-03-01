@@ -190,3 +190,28 @@ std::string ServiceConfig(const std::string&) { return "Service operations only 
 #endif
 
 }} // namespace rtlc2::modules
+
+// Dispatcher called from agent.cpp via extern declaration
+namespace rtlc2 {
+std::string ServiceCommand(const std::string& action, const std::string& args) {
+    if (action == "list")   return rtlc2::modules::ServiceList();
+    if (action == "start")  return rtlc2::modules::ServiceStart(args);
+    if (action == "stop")   return rtlc2::modules::ServiceStop(args);
+    if (action == "delete") return rtlc2::modules::ServiceDelete(args);
+    if (action == "config") return rtlc2::modules::ServiceConfig(args);
+    if (action == "create") {
+        // args format: "name|displayName|binPath|startType"
+        auto p1 = args.find('|');
+        auto p2 = args.find('|', p1 + 1);
+        auto p3 = args.find('|', p2 + 1);
+        if (p1 == std::string::npos || p2 == std::string::npos)
+            return "Error: create requires name|displayName|binPath[|startType]";
+        std::string name = args.substr(0, p1);
+        std::string display = args.substr(p1 + 1, p2 - p1 - 1);
+        std::string binPath = args.substr(p2 + 1, (p3 != std::string::npos) ? p3 - p2 - 1 : std::string::npos);
+        std::string startType = (p3 != std::string::npos) ? args.substr(p3 + 1) : "auto";
+        return rtlc2::modules::ServiceCreate(name, display, binPath, startType);
+    }
+    return "Unknown service action: " + action;
+}
+} // namespace rtlc2

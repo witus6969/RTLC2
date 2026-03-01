@@ -9,8 +9,6 @@
 namespace rtlc2 {
 namespace syscalls {
 
-// Forward declaration from resolver.cpp
-struct SyscallEntry;
 extern SyscallEntry* GetEntry(const char* name);
 extern SyscallMethod GetMethod();
 extern bool IsInitialized();

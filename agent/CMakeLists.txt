@@ -13,7 +13,7 @@ endif()
 # Compiler options
 if(MSVC)
     add_compile_options(/W4 /O2 /MT)
-    add_compile_definitions(_CRT_SECURE_NO_WARNINGS WIN32_LEAN_AND_MEAN)
+    add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
 else()
     add_compile_options(-Wall -Wextra -O2)
     if(WIN32)
@@ -21,9 +21,9 @@ else()
     endif()
 endif()
 
-# Platform detection
+# Platform detection & Windows version target
 if(WIN32)
-    add_compile_definitions(RTLC2_WINDOWS)
+    add_compile_definitions(RTLC2_WINDOWS WIN32_LEAN_AND_MEAN _WIN32_WINNT=0x0600 WINVER=0x0600)
 elseif(APPLE)
     add_compile_definitions(RTLC2_MACOS)
 else()

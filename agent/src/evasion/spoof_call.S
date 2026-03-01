@@ -37,7 +37,9 @@
 .intel_syntax noprefix
 
 .global SpoofedCall
+#ifdef __ELF__
 .type SpoofedCall, @function
+#endif
 
 SpoofedCall:
     /*
@@ -235,7 +237,9 @@ SpoofedCall:
 
     ret
 
+#ifdef __ELF__
 .size SpoofedCall, . - SpoofedCall
+#endif
 
 #endif /* _WIN64 */
 #endif /* RTLC2_WINDOWS */

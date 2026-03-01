@@ -134,3 +134,32 @@ std::string RegistryCreateKey(const std::string&, const std::string&) {
 #endif
 
 }} // namespace rtlc2::modules
+
+// Dispatcher called from agent.cpp via extern declaration
+namespace rtlc2 {
+std::string RegistryWriteCommand(const std::string& action, const std::string& args) {
+    // args format: "hive|keyPath|valueName|data|type"
+    auto p1 = args.find('|');
+    auto p2 = (p1 != std::string::npos) ? args.find('|', p1 + 1) : std::string::npos;
+
+    if (action == "createkey") {
+        if (p1 == std::string::npos) return "Error: createkey requires hive|keyPath";
+        return modules::RegistryCreateKey(args.substr(0, p1), args.substr(p1 + 1));
+    }
+
+    auto p3 = (p2 != std::string::npos) ? args.find('|', p2 + 1) : std::string::npos;
+
+    if (action == "delete") {
+        if (p2 == std::string::npos) return "Error: delete requires hive|keyPath|valueName";
+        return modules::RegistryDelete(args.substr(0, p1), args.substr(p1 + 1, p2 - p1 - 1),
+                                       args.substr(p2 + 1));
+    }
+
+    // Default: write
+    auto p4 = (p3 != std::string::npos) ? args.find('|', p3 + 1) : std::string::npos;
+    if (p3 == std::string::npos) return "Error: write requires hive|keyPath|valueName|data[|type]";
+    std::string regType = (p4 != std::string::npos) ? args.substr(p4 + 1) : "REG_SZ";
+    return modules::RegistryWrite(args.substr(0, p1), args.substr(p1 + 1, p2 - p1 - 1),
+                                  args.substr(p2 + 1, p3 - p2 - 1), args.substr(p3 + 1, (p4 != std::string::npos) ? p4 - p3 - 1 : std::string::npos), regType);
+}
+} // namespace rtlc2

